@@ -48,6 +48,18 @@ public class ProfileEntity {
 	@Column(name = "email")
 	private String email;
 
+	@Column(name = "home_address")
+	private String home_address;
+
+	@Column(name = "work_address")
+	private String work_address;
+
+	@Column(name = "occupation")
+	private String occupation;
+
+	@Column(name = "image_url")
+	private String image_url;
+
 	@Column(name = "active")
 	private boolean active;
 
@@ -61,8 +73,9 @@ public class ProfileEntity {
 	@Override
 	public String toString() {
 		return "ProfileEntity [id=" + id + ", first_name=" + first_name + ", middle_name=" + middle_name
-				+ ", last_name=" + last_name + ", phone=" + phone + ", email=" + email + ", active=" + active
-				+ ", user=" + user + "]";
+				+ ", last_name=" + last_name + ", phone=" + phone + ", email=" + email + ", home_address="
+				+ home_address + ", work_address=" + work_address + ", occupation=" + occupation + ", image_url="
+				+ image_url + ", active=" + active + ", user=" + user + "]";
 	}
 
 }

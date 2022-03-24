@@ -1,0 +1,5 @@
+package com.gopalpg.pgManagement.service;
+
+public interface AdminService {
+
+}

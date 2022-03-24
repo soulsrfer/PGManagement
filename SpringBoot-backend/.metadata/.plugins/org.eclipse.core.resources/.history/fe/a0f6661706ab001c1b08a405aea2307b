@@ -1,0 +1,5 @@
+package com.gopalpg.pgManagement.controller;
+
+public class AdminController {
+
+}

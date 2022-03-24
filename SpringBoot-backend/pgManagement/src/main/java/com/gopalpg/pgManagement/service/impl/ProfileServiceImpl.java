@@ -62,6 +62,10 @@ public class ProfileServiceImpl implements ProfileService {
 		existingProfile.setLast_name(profile.getLast_name());
 		existingProfile.setEmail(profile.getEmail());
 		existingProfile.setPhone(profile.getPhone());
+		existingProfile.setHome_address(profile.getHome_address());
+		existingProfile.setWork_address(profile.getWork_address());
+		existingProfile.setOccupation(profile.getOccupation());
+		existingProfile.setImage_url(profile.getImage_url());
 		
 		profileRepository.save(existingProfile);
 		
