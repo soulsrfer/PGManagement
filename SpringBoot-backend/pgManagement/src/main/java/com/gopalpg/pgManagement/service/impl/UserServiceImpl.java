@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.gopalpg.pgManagement.dao.UserRepository;
 import com.gopalpg.pgManagement.entity.UserEntity;
 import com.gopalpg.pgManagement.exception.ResourceNotFoundException;
+import com.gopalpg.pgManagement.model.LoginModel;
 import com.gopalpg.pgManagement.service.UserService;
 
 @Service
@@ -64,7 +65,17 @@ public class UserServiceImpl implements UserService {
 		// check whether a user exist in DB or not
 		userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("UserEntity", "Id", id));
 		userRepository.deleteById(id);
-		
+
+	}
+
+	@Override
+	public UserEntity login(LoginModel loginModel) {
+		UserEntity user = null;
+		if (userRepository.findByPhone(loginModel.getContactNumber()) != null) {
+			user = userRepository.findByPhone(loginModel.getContactNumber());
+		}
+
+		return user;
 	}
 
 }

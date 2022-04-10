@@ -1,0 +1,81 @@
+<section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+        <div class="container mt-5">
+
+            <div class="col-md-6">
+                <div class="card px-5 py-5" id="form1">
+                    <div class="form-data" v-if="!submitted">
+                        <div class="container-fluid">
+                            <form [formGroup]="addForm" (ngSubmit)="submit()">
+                                <div class="">
+                                    <div class="modal-body">
+
+                                        <div class="form-group">
+                                            First Name
+                                            <input type="text" class="form-control" formControlName="first_name"
+                                                placeholder="First Name">
+                                        </div>
+                                        <div *ngIf="addForm.controls['first_name'].invalid && (addForm.controls['first_name'].dirty || addForm.controls['first_name'].touched)"
+                                            class="text-danger">
+                                            <div *ngIf="addForm.controls['first_name'].errors">
+                                                <div class="text-danger" style="font-size: xx-small;"> Please enter
+                                                    First Name</div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group ">
+                                            Last Name
+                                            <input type="text" class="form-control" formControlName="last_name"
+                                                placeholder="Last Name">
+                                        </div>
+                                        <div *ngIf="addForm.controls['last_name'].invalid && (addForm.controls['last_name'].dirty || addForm.controls['last_name'].touched)"
+                                            class="text-danger">
+                                            <div *ngIf="addForm.controls['last_name'].errors">
+                                                <div class="text-danger" style="font-size: xx-small;"> Please enter Last
+                                                    Name</div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group  ">
+                                            <label>Phone</label>
+                                            <input type="text" class="form-control" formControlName="phone"
+                                                placeholder="Contact Number">
+                                        </div>
+                                        <div *ngIf="addForm.controls['phone'].invalid && (addForm.controls['phone'].dirty || addForm.controls['phone'].touched)"
+                                            class="text-danger">
+                                            <div *ngIf="addForm.controls['phone'].errors">
+                                                <div class="text-danger" style="font-size: xx-small;">Please enter Phone
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group ">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" formControlName="password"
+                                                placeholder="Password">
+                                        </div>
+                                        <div *ngIf="addForm.controls['password'].invalid && (addForm.controls['password'].dirty || addForm.controls['password'].touched)"
+                                            class="text-danger">
+                                            <div *ngIf="addForm.controls['password'].errors">
+                                                <div class="text-danger" style="font-size: xx-small;">Please enter
+                                                    Password</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-secondary" [formTarget]="!addForm.valid"
+                                    [disabled]="!addForm.valid">
+                                    Save
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

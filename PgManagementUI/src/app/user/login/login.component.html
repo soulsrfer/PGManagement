@@ -1,0 +1,55 @@
+<section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+        <div class="container mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="card px-5 py-5" id="form1">
+                        <div class="form-data" v-if="!submitted">
+
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <div class="modal-header">
+                                    <form [formGroup]="addForm" (ngSubmit)="submit()">
+                                        <div class="form-header">
+                                            <h5 class="fw-bold mb-2 text-uppercase">Create Account</h5>
+                                        </div>
+                                        <h5 class="fw-bold mb-2 text-uppercase">And Log In</h5>
+
+                                        <div *ngIf="addForm.controls['contact'].invalid && (addForm.controls['contact'].dirty || addForm.controls['contact'].touched)"
+                                            class="alert">
+                                            <div *ngIf="addForm.controls['contact'].errors">
+                                                Please enter Phonr Number as Username
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label></label>
+                                            <input type="text" class="form-control" placeholder="Number"
+                                                formControlName="contact">
+                                        </div>
+
+                                        <div *ngIf="addForm.controls['password'].invalid && (addForm.controls['password'].dirty || addForm.controls['password'].touched)"
+                                            class="alert">
+                                            <div *ngIf="addForm.controls['password'].errors">
+                                                Please enter Password
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label></label>
+                                            <input type="password" class="form-control" placeholder="Enter Password"
+                                                formControlName="password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <button type="submit" class="btn btn-secondary"
+                                                [formTarget]="!addForm.valid" [disabled]="!addForm.valid"> Sign
+                                                Up</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
