@@ -12,6 +12,13 @@ import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UserHomeComponent } from './user-home/user-home.component';
+import { BedsComponent } from './beds/beds.component';
+import { RegestrationComponent } from './regestration/regestration.component';
+import { AfterLoginComponent } from './after-login/after-login.component';
+import { BeddetailsComponent } from './beddetails/beddetails.component';
+import { FourSharingComponent } from './four-sharing/four-sharing.component';
+import { SixSharingComponent } from './six-sharing/six-sharing.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,14 @@ import { ProfileComponent } from './profile/profile.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    UserHomeComponent,
+    BedsComponent,
+    RegestrationComponent,
+    AfterLoginComponent,
+    BeddetailsComponent,
+    FourSharingComponent,
+    SixSharingComponent
   ],
   imports: [
     BrowserModule,

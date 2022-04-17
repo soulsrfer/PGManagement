@@ -1,0 +1,21 @@
+<br>
+<br>
+<br>
+<br>
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none; background-color: whitesmoke;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  
+  <a [routerLink]="'profile'" class="w3-bar-item w3-button">Your Profile</a>
+  <a  class="w3-bar-item w3-button" [routerLink]="'logout'">Log Out</a>
+  
+</div>
+
+<div id="main">
+
+<div class="teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="container">
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -2,11 +2,11 @@
     <div class="container" data-aos="fade-up">
         <div class="container mt-5">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
-                    <div class="card px-5 py-5" id="form1">
+                <div class="col-md-5">
+                    <div class="card px-3 py-3" id="form1">
                         <div class="form-data" v-if="!submitted">
 
-                            <div class="mb-md-5 mt-md-4 pb-5">
+                            <div class="mb-md-3 mt-md-2 pb-3">
                                 <div class="modal-header">
                                     <form [formGroup]="addForm" (ngSubmit)="submit()">
                                         <div class="form-header">
@@ -23,7 +23,7 @@
                                         <div class="form-group">
                                             <label></label>
                                             <input type="text" class="form-control" placeholder="Number"
-                                                formControlName="contact">
+                                                formControlName="contact" style="width: 400px;">
                                         </div>
 
                                         <div *ngIf="addForm.controls['password'].invalid && (addForm.controls['password'].dirty || addForm.controls['password'].touched)"
@@ -37,17 +37,18 @@
                                             <input type="password" class="form-control" placeholder="Enter Password"
                                                 formControlName="password">
                                         </div>
+                                        <hr>    
                                         <div class="mb-3">
                                             <button type="submit" class="btn btn-secondary"
-                                                [formTarget]="!addForm.valid" [disabled]="!addForm.valid"> Sign
-                                                Up</button>
+                                                [formTarget]="!addForm.valid" [disabled]="!addForm.valid"> Log in</button> <hr>
+                                                <button type="submit" class="btn btn-secondary"> Sign Up</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><router-outlet></router-outlet>
             </div>
         </div>
     </div>

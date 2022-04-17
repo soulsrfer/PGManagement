@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.loginService.login(this.addForm.value).subscribe(data => {
         user = data;
         if(this.loginService.checkUser(user)){
-          this.router.navigate(['/home']);
+          this.router.navigate(['/user-home']);
         }else{
           alert("Enter Valid Mobile Number & Password")
         }

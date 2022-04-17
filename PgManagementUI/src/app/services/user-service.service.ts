@@ -28,16 +28,22 @@ export class UserServiceService {
 
   checkUser(user:any){
     if (user != null) {
-      console.log("If User", user)
       localStorage.setItem('user', JSON.stringify(user));
       this.loggedIn = true;
       return true;
     } else {
-      console.log("Else User", user)
       localStorage.setItem('user', '');
       this.loggedIn = false;
       return false;
     }
+  }
+
+  getLoggedInUserData(){
+   if(localStorage.getItem('user')){
+     return localStorage.getItem('user');
+   }else {
+    return null;
+   }
   }
 
   //  checkUserExist(loginPara: any){
